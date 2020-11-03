@@ -5,10 +5,10 @@ Still in early development.
 
 ## images
 <p float="left" align="middle">
-<img src="https://github.com/olafvisker/grond/blob/main/imgs/s1.png" width="45%" />
-<img src="https://github.com/olafvisker/grond/blob/main/imgs/s2.png" width="45%" />
-<img src="https://github.com/olafvisker/grond/blob/main/imgs/s3.png" width="45%" />
-<img src="https://github.com/olafvisker/grond/blob/main/imgs/s4.png" width="45%" />
+<img src="https://github.com/olafvisker/grond/blob/main/imgs/s1.png" width="49%" />
+<img src="https://github.com/olafvisker/grond/blob/main/imgs/s2.png" width="49%" />
+<img src="https://github.com/olafvisker/grond/blob/main/imgs/s3.png" width="49%" />
+<img src="https://github.com/olafvisker/grond/blob/main/imgs/s4.png" width="49%" />
 </p>
 
 **enjoy!**
