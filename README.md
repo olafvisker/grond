@@ -1,5 +1,5 @@
 # grond
-A flexible three.js based 3D geo maps renderer.
+A flexible three.js based 3D geomap renderer.
 
 Still in early development.
 
