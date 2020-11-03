@@ -43,7 +43,7 @@ class World {
     });
 
     loop.updatables.push(controls);
-    // this.scene.add(new Grid());
+    this.scene.add(new Grid());
 
     const provider = new MapboxProvider();
   }
