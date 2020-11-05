@@ -18,6 +18,10 @@ let loop;
 let controls;
 let resizer;
 
+let c = null;
+let x = 0;
+let y = 0;
+
 class World {
   constructor(container) {
     this._init(container);
@@ -31,7 +35,30 @@ class World {
     loop.updatables.push(controls);
     scene.add(new Grid());
 
-    this._setup_test_scenario(2, sx, sy, sz, new MapboxProvider());
+    document.addEventListener("keydown", (e) => {
+      let update = false;
+      if (e.key == "d") {
+        x++;
+        update = true;
+      }
+      if (e.key == "a") {
+        x--;
+        update = true;
+      }
+      if (e.key == "w") {
+        y++;
+        update = true;
+      }
+      if (e.key == "s") {
+        y--;
+        update = true;
+      }
+      if (update) {
+        this._setup_test_scenario_2(sx, sy, sz, new MapboxProvider());
+      }
+    });
+
+    // this._setup_test_scenario(1, sx, sy, sz, new MapboxProvider());
   }
 
   _init(container) {
@@ -59,6 +86,15 @@ class World {
       scene.add(c);
       c.generate();
     }
+  }
+
+  _setup_test_scenario_2(sx, sy, sz, provider) {
+    if (c != null) scene.remove(c);
+    c = new GeoTerrainChunk(sx + x, sy + y, sz, provider);
+    c.position.x = x;
+    c.position.z = y;
+    scene.add(c);
+    c.generate();
   }
 
   start() {

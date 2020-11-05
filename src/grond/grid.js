@@ -10,7 +10,7 @@ class Grid extends THREE.Mesh {
     this.color = new THREE.Color("white");
     this.size1 = 100 * WORLD_SCALE;
     this.size2 = 1000 * WORLD_SCALE;
-    this.distance = 10000 * WORLD_SCALE;
+    this.distance = 11000 * WORLD_SCALE;
 
     const geometry = new THREE.PlaneBufferGeometry(2, 2, 1, 1);
 

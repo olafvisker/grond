@@ -17,6 +17,7 @@ class TerrainMesh extends THREE.Mesh {
     for (var i = 0, l = geom.attributes.position.count; i < l; i++) {
       geom.attributes.position.setY(i, heightmap.data[i]);
     }
+
     this.geometry = geom;
     this.castShadow = false;
     this.receiveShadow = true;
