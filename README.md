@@ -4,6 +4,11 @@ A flexible three.js based 3D geomap renderer.
 Still in early development.
 
 ## how
+**Install**
+```
+npm install
+```
+
 **Dev**
 ```
 npm start
