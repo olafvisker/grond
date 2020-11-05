@@ -1,6 +1,8 @@
 import { Clock } from "three";
+import Stats from "stats.js";
 
 const clock = new Clock();
+const stats = new Stats();
 
 class Loop {
   constructor(camera, scene, renderer) {
@@ -8,12 +10,18 @@ class Loop {
     this.scene = scene;
     this.renderer = renderer;
     this.updatables = [];
+
+    document.body.appendChild(stats.dom);
   }
+
 
   start() {
     this.renderer.setAnimationLoop(() => {
+      stats.begin();
       this.tick();
       this.renderer.render(this.scene, this.camera);
+      stats.end();
+      stats.update();
     });
   }
 

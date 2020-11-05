@@ -3,6 +3,17 @@ A flexible three.js based 3D geomap renderer.
 
 Still in early development.
 
+## how
+**Dev**
+```
+npm start
+```
+Project is being served at http://localhost:8080/
+
+**Production**
+```
+npm run build
+```
 ## images
 <p float="left" align="middle">
 <img src="https://github.com/olafvisker/grond/blob/main/imgs/s1.png" width="49%" />
