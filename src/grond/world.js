@@ -29,36 +29,36 @@ class World {
     // const [sx, sy, sz] = pointToTile(131.0350212, -25.3437548, 14);
     // const [sx, sy, sz] = pointToTile(-119.63659568, 37.72970977, 14);
     // const [sx, sy, sz] = pointToTile(138.7283623, 35.3628594, 14);
-    const [sx, sy, sz] = pointToTile(-73.2052, -50.3948, 14);
-    // const [sx, sy, sz] = pointToTile(174.0233, -39.2629, 14);
+    // const [sx, sy, sz] = pointToTile(-73.2052, -50.3948, 14);
+    const [sx, sy, sz] = pointToTile(174.0233, -39.2629, 14);
 
     loop.updatables.push(controls);
     scene.add(new Grid());
 
-    document.addEventListener("keydown", (e) => {
-      let update = false;
-      if (e.key == "d") {
-        x++;
-        update = true;
-      }
-      if (e.key == "a") {
-        x--;
-        update = true;
-      }
-      if (e.key == "w") {
-        y++;
-        update = true;
-      }
-      if (e.key == "s") {
-        y--;
-        update = true;
-      }
-      if (update) {
-        this._setup_test_scenario_2(sx, sy, sz, new MapboxProvider());
-      }
-    });
+    // document.addEventListener("keydown", (e) => {
+    //   let update = false;
+    //   if (e.key == "d") {
+    //     x++;
+    //     update = true;
+    //   }
+    //   if (e.key == "a") {
+    //     x--;
+    //     update = true;
+    //   }
+    //   if (e.key == "w") {
+    //     y++;
+    //     update = true;
+    //   }
+    //   if (e.key == "s") {
+    //     y--;
+    //     update = true;
+    //   }
+    //   if (update) {
+    //     this._setup_test_scenario_2(sx, sy, sz, new MapboxProvider());
+    //   }
+    // });
 
-    // this._setup_test_scenario(1, sx, sy, sz, new MapboxProvider());
+    this._setup_test_scenario(2, sx, sy, sz, new MapboxProvider());
   }
 
   _init(container) {
@@ -80,7 +80,7 @@ class World {
       const x = i % dim;
       const y = Math.floor(i / dim);
       const c = new GeoTerrainChunk(sx + x, sy + y, sz, provider);
-      const size = (256 - c.mpp) * c.mpp * WORLD_SCALE;
+      const size = (256 - c.mpp / 4) * c.mpp * WORLD_SCALE;
       c.position.x = x * size;
       c.position.z = y * size;
       scene.add(c);

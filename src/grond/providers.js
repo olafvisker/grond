@@ -20,10 +20,11 @@ class MapboxProvider extends Provider {
 
   provideHeightmap(x, y, z, callback) {
     let url = `https://api.mapbox.com/v4/mapbox.terrain-rgb/${z}/${x}/${y}.pngraw?access_token=${this.token}`;
-    let heights = [];
+    // let heights = [];
     getPixels(url, (err, pixels) => {
       if (!err) {
         const [width, height] = pixels.shape;
+        let heights = Array.from(Array(width), () => new Array(height));
         let min = Number.MAX_VALUE;
         let max = -Number.MAX_VALUE;
         for (let y = 0, hl = height; y < hl; y++) {
@@ -35,7 +36,8 @@ class MapboxProvider extends Provider {
             );
             if (min > h) min = h;
             if (max < h) max = h;
-            heights.push(h);
+            // heights.push(h);
+            heights[y][x] = h;
           }
         }
         callback({
