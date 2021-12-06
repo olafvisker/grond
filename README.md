@@ -1,7 +1,8 @@
 # grond
 A flexible three.js based 3D geomap renderer.
 
-Still in early development.
+Still in early development. 
+You can checkout a demo [here](https://olafvisker.github.io/grond/).
 
 ## how
 **Install**
