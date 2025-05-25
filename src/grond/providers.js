@@ -14,7 +14,7 @@ class Provider {
 class MapboxProvider extends Provider {
   constructor() {
     super(
-      "pk.eyJ1IjoiYWJyYWFvYWx2ZXMiLCJhIjoiY2oxbTRzZXBmMDA1ZjJ3bzI3ODZucTM2dCJ9.AICaNFFp-vS2tD5mEHulmA"
+      "api-key-here"
     );
   }
 
